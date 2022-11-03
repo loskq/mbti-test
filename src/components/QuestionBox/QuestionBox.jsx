@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-// import QuestionList from '../../components/QuestionList/QuestionList';
-// import ProgressBar from '../../components/ProgressBar/ProgressBar';
-
 
 function QuestionBox(props){ 
   const [currentQuestion, setCurrentQuestion] = useState(0);
