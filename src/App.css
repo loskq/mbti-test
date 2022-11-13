@@ -33,6 +33,10 @@ button:active {
   transform: scale(1.05);
 }
 
+.pill {
+  border-radius: 9px;
+}
+
 .progressColor {
   background: #dfeafb
 }
