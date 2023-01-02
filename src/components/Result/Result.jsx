@@ -26,6 +26,18 @@ function Result(props) {
     }
   }
 
+  let type = "XXXX";
+
+  neSi > 6 && niSe < 6
+    ? (type = `You're type is ENFP.`)
+    : niSe > 6 && niSe < 6
+    ? (type = `You're type is ISTP.`)
+    : neSi < 6
+    ? (type = `You're type is INTJ.`)
+    : niSe < 6
+    ? (type = `You're type is ESFJ.`)
+    : (type = "Undefined-1");
+
   return (
     <div>
       {showType ? (
@@ -33,17 +45,7 @@ function Result(props) {
           <span>
             You scored {neSi} {niSe} out of {questions.length}
           </span>
-          <div className="">
-            {neSi > 6 && niSe < 6
-              ? `You're type is ENFP.`
-              : niSe > 6 && niSe < 6
-              ? `You're type is ISTP.`
-              : neSi < 6
-              ? `You're type is INTJ.`
-              : niSe < 6
-              ? `You're type is ESFJ.`
-              : "Undefined-1"}
-          </div>
+          <div className="">{type}</div>
         </div>
       ) : (
         <>
@@ -62,7 +64,7 @@ function Result(props) {
               (answerOption, index) => (
                 <button
                   key={index}
-                  className="w-30 f4  no-underline pill ph3 pv3 mb3 dib black  link"
+                  className="w-30 f4 no-underline pill ph3 pv3 mb3 dib black link"
                   onClick={() => {
                     handleButton(answerOption.value);
                     progress();

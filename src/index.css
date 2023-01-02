@@ -11,12 +11,6 @@ body {
   background: -webkit-linear-gradient(90deg, rgba(243,255,255,1) 0%, rgba(223,234,251,1) 100%);
   background: linear-gradient(90deg, rgba(243,255,255,1) 0%, rgba(223,234,251,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f3ffff",endColorstr="#dfeafb",GradientType=1);
-
- /* background: rgb(235,241,241);
-background: -moz-linear-gradient(90deg, rgba(235,241,241,1) 0%, rgba(120,247,255,1) 66%, rgba(59,121,218,1) 100%);
-background: -webkit-linear-gradient(90deg, rgba(235,241,241,1) 0%, rgba(120,247,255,1) 66%, rgba(59,121,218,1) 100%);
-background: linear-gradient(90deg, rgba(235,241,241,1) 0%, rgba(120,247,255,1) 66%, rgba(59,121,218,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ebf1f1",endColorstr="#3b79da",GradientType=1);*/
 }
 
 code {

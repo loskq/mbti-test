@@ -1,20 +1,28 @@
-import React from  'react';
-import QuestionBox from './components/QuestionBox/QuestionBox';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import './App.css'
+import React, { useState } from "react";
 
-function App(props) {
- 
+import QuestionBox from "./components/QuestionBox/QuestionBox";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Register from "./components/Route/Register";
+
+function App() {
+  const [route, setRoute] = useState("Register");
+
+  function routeHandler(routes) {
+    setRoute(route);
+
+    if (routes === "QuestionBox") {
+      setRoute("QuestionBox");
+    }
+  }
+
   return (
-    <div className='App'>
+    <div className="App">
       <Header />
-      <QuestionBox />
-
+      {route === "Register" && <Register onRoute={routeHandler} />}
+      {route === "QuestionBox" && <QuestionBox />}
       {/*
       <IntroForm />
-      <Types />  
-      <Result />
       */}
       <Footer />
     </div>

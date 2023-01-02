@@ -1,6 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #3f3f3f;
+}
+
 .App {
   text-align: center;
  }
+
+ .app {
+  width: 90%;
+  max-width: 43rem;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: white;
+  margin: 3rem auto;
+}
 
 header {
   font-family: 'Courier New', Courier, monospace;
@@ -16,22 +34,22 @@ footer {
   width: 100%;
 }
 
-button {
+/* /* button {
   backface-visibility: hidden;
   transform: translateZ(0);
   background: -moz-linear-gradient(90deg, rgba(243,255,255,1) 0%, rgba(223,234,251,1) 100%);
   background: -webkit-linear-gradient(90deg, rgba(243,255,255,1) 0%, rgba(223,234,251,1) 100%);
   background: linear-gradient(90deg, rgba(243,255,255,1) 0%, rgba(223,234,251,1) 100%);
 
-}
+} */
 
-button:hover, button:focus {
+/* button:hover, button:focus {
   transform: scale(1.02);
 }
 
 button:active {
   transform: scale(1.05);
-}
+}  */
 
 .pill {
   border-radius: 9px;
@@ -41,7 +59,7 @@ button:active {
   background: #dfeafb
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -74,4 +92,4 @@ button:active {
   to {
     transform: rotate(360deg);
   }
-}
+} */
