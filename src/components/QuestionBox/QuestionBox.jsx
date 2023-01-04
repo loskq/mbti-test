@@ -1,15 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Result from "../Result/Result";
-import ProgressBar from "../ProgressBar/ProgressBar";
 
 function QuestionBox(props) {
-  const [percentage, setPercentage] = useState(0);
-
-  function handleProgress() {
-    setPercentage(percentage + 25);
-  }
-
   const obj = {
     num: 1,
   };
@@ -164,8 +157,7 @@ function QuestionBox(props) {
 
   return (
     <div className="app">
-      <Result questions={questions} progress={handleProgress} />
-      <ProgressBar percentage={percentage} />
+      <Result questions={questions} />
     </div>
   );
 }

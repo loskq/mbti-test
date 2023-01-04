@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 
+import ProgressBar from "../ProgressBar/ProgressBar";
+
 function Result(props) {
-  const { questions, progress } = props;
+  const { questions } = props;
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showType, setShowType] = useState(false);
   const [neSi, setNeSi] = useState(0);
   const [niSe, setNiSe] = useState(0);
+  const [percentage, setPercentage] = useState(0);
+
+  function handleProgress() {
+    setPercentage(percentage + 25);
+  }
 
   function handleButton(value) {
     const nextQues = currentQuestion + 1;
@@ -67,7 +74,7 @@ function Result(props) {
                   className="w-30 f4 no-underline pill ph3 pv3 mb3 dib black link"
                   onClick={() => {
                     handleButton(answerOption.value);
-                    progress();
+                    handleProgress();
                   }}
                 >
                   {answerOption.answerText}
@@ -75,6 +82,7 @@ function Result(props) {
               )
             )}
           </div>
+          <ProgressBar percentage={percentage} />
         </>
       )}
     </div>
